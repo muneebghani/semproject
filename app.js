@@ -29,7 +29,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 // Serve up static assets (usually on heroku)
 
-app.use(express.static("client/build"));
+app.use(express.static(path.join(__dirname, "client/build")));
+// Handle React routing, return all requests to React app
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 app.use(express.static("upload"));
 app.use("/", indexRouter);
