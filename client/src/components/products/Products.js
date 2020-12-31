@@ -22,7 +22,7 @@ const Products = () => {
 
   const getData = () => {
     axios
-      .get("/api/products")
+      .get("/products")
       .then((res) => {
         setProducts(res.data);
         setLoading(false);
