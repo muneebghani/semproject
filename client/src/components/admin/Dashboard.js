@@ -24,7 +24,7 @@ const Dashboard = (props) => {
 
   const getData = () => {
     axios
-      .get("http://localhost:8002/api/products")
+      .get("/api/products")
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

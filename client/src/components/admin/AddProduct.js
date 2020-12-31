@@ -30,7 +30,7 @@ const AddProduct = (props) => {
 
   React.useEffect(() => {
     if (url) {
-      fetch("http://localhost:8002/api/products", {
+      fetch("/api/products", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

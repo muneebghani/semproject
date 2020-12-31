@@ -29,7 +29,7 @@ const EditProduct = (props) => {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:8002/api/products/" + id)
+      .get("/api/products/" + id)
       .then((res) => {
         setInstrument(res.data.instrument);
         setPrice(res.data.price);
@@ -126,7 +126,7 @@ const EditProduct = (props) => {
             size="large"
             onClick={() => {
               axios
-                .put("http://localhost:4000/api/products/" + id, {
+                .put("/api/products/" + id, {
                   instrument,
                   price,
                   rating,

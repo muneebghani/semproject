@@ -38,7 +38,7 @@ const ProductDetail = (props) => {
   const id = props.match.params.id;
   React.useEffect(() => {
     axios
-      .get("http://localhost:8002/api/products/" + id)
+      .get("/api/products/" + id)
       .then((res) => {
         setProduct(res.data);
       })
