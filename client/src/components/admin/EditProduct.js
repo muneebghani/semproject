@@ -29,7 +29,7 @@ const EditProduct = (props) => {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:4000/api/products/" + id)
+      .get("https://whispering-fjord-20541.herokuapp/api/products/" + id)
       .then((res) => {
         setInstrument(res.data.instrument);
         setPrice(res.data.price);

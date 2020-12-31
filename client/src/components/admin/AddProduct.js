@@ -30,7 +30,7 @@ const AddProduct = (props) => {
 
   React.useEffect(() => {
     if (url) {
-      fetch("http://localhost:4000/api/products", {
+      fetch("https://whispering-fjord-20541.herokuapp/api/products", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

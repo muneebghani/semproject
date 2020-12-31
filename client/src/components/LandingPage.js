@@ -52,7 +52,7 @@ const LandingPage = () => {
   const [loading, setLoading] = React.useState(true);
   const getTopProdsData = () => {
     axios
-      .get("http://localhost:4000/api/products/getTopProds")
+      .get("https://whispering-fjord-20541.herokuapp/api/products/getTopProds")
       .then((res) => {
         setTopprods(res.data);
         setLoading(false);

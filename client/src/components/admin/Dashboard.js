@@ -24,7 +24,7 @@ const Dashboard = (props) => {
 
   const getData = () => {
     axios
-      .get("http://localhost:4000/api/products")
+      .get("https://whispering-fjord-20541.herokuapp/api/products")
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

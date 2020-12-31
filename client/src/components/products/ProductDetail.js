@@ -38,7 +38,7 @@ const ProductDetail = (props) => {
   const id = props.match.params.id;
   React.useEffect(() => {
     axios
-      .get("http://localhost:4000/api/products/" + id)
+      .get("https://whispering-fjord-20541.herokuapp/api/products/" + id)
       .then((res) => {
         setProduct(res.data);
       })
