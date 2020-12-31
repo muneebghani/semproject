@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = "https://whispering-fjord-20541.herokuapp/api/";
+axios.defaults.baseURL = "http://localhost:8002/api/";
 axios.defaults.headers.common["x-auth-token"] = localStorage.getItem("token");
 class GenericService {
   constructor() {}
